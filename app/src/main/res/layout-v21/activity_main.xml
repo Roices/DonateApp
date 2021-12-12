@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    tools:context="App.mydonate.Activity.MainActivity">
+
+    <TextView
+        android:id="@+id/textDonateTitle"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:text="Welcome Homer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/buton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20dp"
+            android:text="Total so Far"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:id="@+id/totalSoFar"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textDonate"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:text="Please Give Generously"
+        android:layout_below="@+id/textDonateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <Button
+        android:id="@+id/buton"
+        android:background="@color/teal_200"
+        android:text="Donate"
+        android:layout_marginBottom="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <NumberPicker
+        android:id="@+id/numbersPicker"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/textDonate"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </NumberPicker>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/textDonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radioPaypal"
+            android:textSize="20dp"
+            android:text="Paypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/radioDirect"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Direct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RadioButton>
+    </RadioGroup>
+
+    <ProgressBar
+        android:layout_marginTop="100dp"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numbersPicker"/>
+
+    <TextView
+        android:id="@+id/textAmount"
+        android:layout_marginTop="75dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/progressBar"
+        android:hint="Amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <EditText
+        android:id="@+id/paymentAmount"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/textAmount"
+        android:layout_marginTop="75dp"
+        android:layout_below="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></EditText>
+
+
+</RelativeLayout>
